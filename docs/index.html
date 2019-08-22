@@ -4,9 +4,10 @@
 		<title>Ohanami score</title>
 		<style>
 			table,
-			td {
+			td.total,
+			td:first-child{
 				border: 1px solid #333;
-			}	
+			}
 
 			thead,
 			tfoot {
@@ -29,7 +30,9 @@
 				background-color: pink;
 				color: #fff;
 			}
-
+			.nbcards {
+				width: 5em;
+			}
 		</style>
 	</head>
 	<body>
@@ -57,85 +60,85 @@
 			</thead>
 			<tbody>
 				<tr id="player1" class="input">
-					<th rowspan="2">   <input type="text"   class="name" name="name" size="10">     </th>
-					<th class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </th>
-					<th class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </th>
-					<th class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></th>
-					<th class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </th>
-					<th class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></th>
-					<th class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></th>
-					<th class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></th>
-					<th rowspan="2" class="total"></th>
+					<td rowspan="2">   <input type="text"   class="name" name="name" size="10">     </td>
+					<td class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </td>
+					<td class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </td>
+					<td class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></td>
+					<td class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </td>
+					<td class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></td>
+					<td class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></td>
+					<td class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></td>
+					<td rowspan="2" class="total"></td>
 				</tr>
 				<tr id="player1_score">
-					<th class="eau1 eau">   </th>
-					<th class="eau2 eau">   </th>
-					<th class="plante2 plante"></th>
-					<th class="eau3 eau">   </th>
-					<th class="plante3 plante"></th>
-					<th class="pierre3 pierre"></th>
-					<th class="sakura3 sakura"></th>
+					<td class="eau1 eau">   </td>
+					<td class="eau2 eau">   </td>
+					<td class="plante2 plante"></td>
+					<td class="eau3 eau">   </td>
+					<td class="plante3 plante"></td>
+					<td class="pierre3 pierre"></td>
+					<td class="sakura3 sakura"></td>
 
 				</tr>
 				<tr id="player2" class="input">
-					<th rowspan="2">   <input type="text"   class="name" name="name" size="10">     </th>
-					<th class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </th>
-					<th class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </th>
-					<th class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></th>
-					<th class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </th>
-					<th class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></th>
-					<th class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></th>
-					<th class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></th>
-					<th rowspan="2" class="total"></th>
+					<td rowspan="2">   <input type="text"   class="name" name="name" size="10">     </td>
+					<td class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </td>
+					<td class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </td>
+					<td class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></td>
+					<td class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </td>
+					<td class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></td>
+					<td class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></td>
+					<td class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></td>
+					<td rowspan="2" class="total"></td>
 				</tr>
 				<tr id="player2_score">
-					<th class="eau1 eau">   </th>
-					<th class="eau2 eau">   </th>
-					<th class="plante2 plante"></th>
-					<th class="eau3 eau">   </th>
-					<th class="plante3 plante"></th>
-					<th class="pierre3 pierre"></th>
-					<th class="sakura3 sakura"></th>
+					<td class="eau1 eau">   </td>
+					<td class="eau2 eau">   </td>
+					<td class="plante2 plante"></td>
+					<td class="eau3 eau">   </td>
+					<td class="plante3 plante"></td>
+					<td class="pierre3 pierre"></td>
+					<td class="sakura3 sakura"></td>
 				</tr>
 				<tr id="player3" class="input">
-					<th rowspan="2">   <input type="text"   class="name" name="name" size="10">     </th>
-					<th class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </th>
-					<th class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </th>
-					<th class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></th>
-					<th class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </th>
-					<th class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></th>
-					<th class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></th>
-					<th class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></th>
-					<th rowspan="2" class="total"></th>
+					<td rowspan="2">   <input type="text"   class="name" name="name" size="10">     </td>
+					<td class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </td>
+					<td class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </td>
+					<td class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></td>
+					<td class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </td>
+					<td class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></td>
+					<td class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></td>
+					<td class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></td>
+					<td rowspan="2" class="total"></td>
 				</tr>
 				<tr id="player3_score">
-					<th class="eau1 eau">   </th>
-					<th class="eau2 eau">   </th>
-					<th class="plante2 plante"></th>
-					<th class="eau3 eau">   </th>
-					<th class="plante3 plante"></th>
-					<th class="pierre3 pierre"></th>
-					<th class="sakura3 sakura"></th>
+					<td class="eau1 eau">   </td>
+					<td class="eau2 eau">   </td>
+					<td class="plante2 plante"></td>
+					<td class="eau3 eau">   </td>
+					<td class="plante3 plante"></td>
+					<td class="pierre3 pierre"></td>
+					<td class="sakura3 sakura"></td>
 				</tr>
 				<tr id="player4" class="input">
-					<th rowspan="2">   <input type="text"   class="name" name="name" size="10">     </th>
-					<th class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </th>
-					<th class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </th>
-					<th class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></th>
-					<th class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </th>
-					<th class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></th>
-					<th class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></th>
-					<th class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></th>
-					<th rowspan="2" class="total"></th>
+					<td rowspan="2">   <input type="text"   class="name" name="name" size="10">     </td>
+					<td class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </td>
+					<td class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </td>
+					<td class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></td>
+					<td class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </td>
+					<td class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></td>
+					<td class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></td>
+					<td class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></td>
+					<td rowspan="2" class="total"></td>
 				</tr>
 				<tr id="player4_score">
-					<th class="eau1 eau">   </th>
-					<th class="eau2 eau">   </th>
-					<th class="plante2 plante"></th>
-					<th class="eau3 eau">   </th>
-					<th class="plante3 plante"></th>
-					<th class="pierre3 pierre"></th>
-					<th class="sakura3 sakura"></th>
+					<td class="eau1 eau">   </td>
+					<td class="eau2 eau">   </td>
+					<td class="plante2 plante"></td>
+					<td class="eau3 eau">   </td>
+					<td class="plante3 plante"></td>
+					<td class="pierre3 pierre"></td>
+					<td class="sakura3 sakura"></td>
 				</tr>
 			</tbody>
 		</table>
