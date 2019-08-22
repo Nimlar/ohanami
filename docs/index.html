@@ -167,7 +167,7 @@
 				output = scoreElem.getElementsByClassName(elem.name)[0];
 				input = parentNode.getElementsByClassName(elem.name)[0];
 				if (elem.name != "name") {
-					let val = calcValue(Number(input.value), elem.name);
+					let val = calcValue(input.valueAsNumber, elem.name);
 					output.innerHTML = val;
 					total = total + val;
 				}
