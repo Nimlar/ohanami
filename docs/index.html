@@ -206,6 +206,14 @@
 	let nbplayers = document.getElementById("nb");
 	nbplayers.addEventListener('change', inputNbPlayersChange); // s/input/change/ ?
 
+	function init() {
+		nbplayers.value = 4;
+		for(i = 1 ; i <= 4; i++) {
+			calculateScore(document.getElementById("player"+i));
+		}
+	}
+
+	init();
 
 	</script>
 	</body>
