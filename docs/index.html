@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ohanami score</title>
+		<style>
+			table,
+			td {
+				border: 1px solid #333;
+			}	
+
+			thead,
+			tfoot {
+				background-color: #333;
+				color: #fff;
+			}
+			.eau {
+				background-color: blue;
+				color: #fff;
+			}
+			.plante {
+				background-color: green;
+				color: #fff;
+			}
+			.pierre {
+				background-color: grey;
+				color: #fff;
+			}
+			.sakura {
+				background-color: pink;
+				color: #fff;
+			}
+
+		</style>
+		<script type="text/javascript">
+		</script>
+		
+	</head>
+	<body>
+		<label for="nb">Number of player (2-4):</label>=
+		<input type="number" id="nb" value="4" name="nb" min="2" max="4">
+		<table>
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>round 1</th>
+					<th colspan="2">round 2 </th>
+					<th colspan="4">round 3 </th>
+					<th rowspan="2">total </th>
+				</tr>
+				<tr>
+					<th></th>
+					<th class="eau title">eau</th>
+					<th class="eau title">eau</th>
+					<th class="plante title">plante</th>
+					<th class="eau title">eau</th>
+					<th class="plante title">plante</th>
+					<th class="pierre title">pierre</th>
+					<th class="sakura title">sakura</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="player1" class="input">
+					<th rowspan="2">   <input type="text"   class="name" name="name" size="10">     </th>
+					<th class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </th>
+					<th class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </th>
+					<th class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></th>
+					<th class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </th>
+					<th class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></th>
+					<th class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></th>
+					<th class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></th>
+					<th rowspan="2" class="total"></th>
+				</tr>
+				<tr id="player1_score">
+					<th class="eau1 eau">   </th>
+					<th class="eau2 eau">   </th>
+					<th class="plante2 plante"></th>
+					<th class="eau3 eau">   </th>
+					<th class="plante3 plante"></th>
+					<th class="pierre3 pierre"></th>
+					<th class="sakura3 sakura"></th>
+
+				</tr>
+				<tr id="player2" class="input">
+					<th rowspan="2">   <input type="text"   class="name" name="name" size="10">     </th>
+					<th class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </th>
+					<th class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </th>
+					<th class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></th>
+					<th class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </th>
+					<th class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></th>
+					<th class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></th>
+					<th class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></th>
+					<th rowspan="2" class="total"></th>
+				</tr>
+				<tr id="player2_score">
+					<th class="eau1 eau">   </th>
+					<th class="eau2 eau">   </th>
+					<th class="plante2 plante"></th>
+					<th class="eau3 eau">   </th>
+					<th class="plante3 plante"></th>
+					<th class="pierre3 pierre"></th>
+					<th class="sakura3 sakura"></th>
+				</tr>
+				<tr id="player3" class="input">
+					<th rowspan="2">   <input type="text"   class="name" name="name" size="10">     </th>
+					<th class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </th>
+					<th class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </th>
+					<th class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></th>
+					<th class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </th>
+					<th class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></th>
+					<th class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></th>
+					<th class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></th>
+					<th rowspan="2" class="total"></th>
+				</tr>
+				<tr id="player3_score">
+					<th class="eau1 eau">   </th>
+					<th class="eau2 eau">   </th>
+					<th class="plante2 plante"></th>
+					<th class="eau3 eau">   </th>
+					<th class="plante3 plante"></th>
+					<th class="pierre3 pierre"></th>
+					<th class="sakura3 sakura"></th>
+				</tr>
+				<tr id="player4" class="input">
+					<th rowspan="2">   <input type="text"   class="name" name="name" size="10">     </th>
+					<th class="eau">   <input type="number" class="nbcards eau1" name="eau1" value="0">   </th>
+					<th class="eau">   <input type="number" class="nbcards eau2" name="eau2" value="0">   </th>
+					<th class="plante"><input type="number" class="nbcards plante2" name="plante2" value="0"></th>
+					<th class="eau">   <input type="number" class="nbcards eau3" name="eau3" value="0">   </th>
+					<th class="plante"><input type="number" class="nbcards plante3" name="plante3" value="0"></th>
+					<th class="pierre"><input type="number" class="nbcards pierre3" name="pierre3" value="0"></th>
+					<th class="sakura"><input type="number" class="nbcards sakura3" name="sakura3" value="0"></th>
+					<th rowspan="2" class="total"></th>
+				</tr>
+				<tr id="player4_score">
+					<th class="eau1 eau">   </th>
+					<th class="eau2 eau">   </th>
+					<th class="plante2 plante"></th>
+					<th class="eau3 eau">   </th>
+					<th class="plante3 plante"></th>
+					<th class="pierre3 pierre"></th>
+					<th class="sakura3 sakura"></th>
+				</tr>
+			</tbody>
+		</table>
+	<script>
+
+	function calcValue(nbCard, name) {
+		if (name == "name")
+			return 0;
+		if (name.startsWith("eau"))
+			return nbCard * 3;
+		if (name.startsWith("plante"))
+			return nbCard * 4;
+		if (name.startsWith("pierre"))
+			return nbCard * 7;
+		if (name.startsWith("sakura"))
+			if (nbCard > 15)
+				nbCard = 15;
+			return (nbCard * (nbCard + 1)) / 2;
+	}
+
+	function calculateScore(parentNode) {
+		scoreElem = document.getElementById(parentNode.id + "_score");
+		let inputs = parentNode.querySelectorAll("input");
+		let total = 0 ;
+		inputs.forEach(function(elem) {
+				output = scoreElem.getElementsByClassName(elem.name)[0];
+				input = parentNode.getElementsByClassName(elem.name)[0];
+				if (elem.name != "name") {
+					let val = calcValue(Number(input.value), elem.name);
+					output.innerHTML = val;
+					total = total + val;
+				}
+		});
+		output = parentNode.getElementsByClassName("total")[0];
+		output.innerHTML = total;
+	}
+	function inputNbCardsChange(event) {
+		calculateScore(event.target.parentElement.parentNode);
+	}
+
+	function show_player(i) {
+		document.getElementById("player"+i).style.display = "table-row"
+		document.getElementById("player"+i+"_score").style.display = "table-row"
+	}
+	function hidde_player(i) {
+		document.getElementById("player"+i).style.display = "none"
+		document.getElementById("player"+i+"_score").style.display = "none"
+
+	}
+	function inputNbPlayersChange(event) {
+		nbplayers = event.target.value;
+		for(i = 1; i <= nbplayers; i++) {
+			show_player(i);
+		}
+		for(; i <= 4; i++) {
+			hidde_player(i);
+		}
+	}
+
+	let inputnbcards = document.querySelectorAll("input.nbcards");
+	inputnbcards.forEach( function(elem){
+		elem.addEventListener('change', inputNbCardsChange); // s/input/chnage/ ?
+	});
+
+	let nbplayers = document.getElementById("nb");
+	nbplayers.addEventListener('change', inputNbPlayersChange); // s/input/change/ ?
+
+
+	</script>
+	</body>
+</html>
+
