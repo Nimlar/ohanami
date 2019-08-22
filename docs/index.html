@@ -175,8 +175,39 @@
 		output = parentNode.getElementsByClassName("total")[0];
 		output.innerHTML = total;
 	}
+
+	function next_focus(elem) {
+		var nextelem = null;
+		var maxPlayer;
+		if (elem.parentElement.nextElementSibling.firstChild.focus) {
+			nextelem = elem.parentElement.nextElementSibling.firstChild;
+		} else {
+			maxPlayer = document.getElementById("nb").valueAsNumber;
+			let curplayer = Number(elem.parentElement.parentElement.id.slice(-1));
+			let curround = Number(elem.name.slice(-1));
+			let nextplayer = curplayer + 1;
+			if (nextplayer > maxPlayer) {
+				// go next round, first player
+				curround = curround + 1;
+				if (curround > 3) {
+					/* End of fill */
+					return;
+				}
+				nextplayer = 1;
+			}
+			nextline = document.getElementById("player" + nextplayer);
+			nextelem = nextline.getElementsByClassName("eau"+curround)[0];
+		}
+		if (nextelem) {
+			nextelem.focus();
+			nextelem.select();
+		}
+	}
+
 	function inputNbCardsChange(event) {
 		calculateScore(event.target.parentElement.parentNode);
+		// set focus to next.
+		next_focus(event.target);
 	}
 
 	function show_player(i) {
